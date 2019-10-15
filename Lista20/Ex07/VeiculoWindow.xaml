@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex07"
         mc:Ignorable="d"
-        Title="VeiculoWindow" Height="200" Width="400">
+        Title="VeiculoWindow" Height="120" Width="400">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <GroupBox Header="Veiculo">
@@ -36,6 +35,5 @@
                 <TextBox Name="txtPreco" Grid.Column="4" Height="23" Margin="5, 0" Grid.Row="1"/>
             </Grid>
         </GroupBox>
-        <Button Content="Inserir" HorizontalAlignment="Left" Margin="10,17,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

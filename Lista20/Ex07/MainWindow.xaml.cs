@@ -20,9 +20,34 @@ namespace Ex07
     /// </summary>
     public partial class MainWindow : Window
     {
+        Loja loja;
+        VeiculoWindow window = new VeiculoWindow();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnLoja_Click(object sender, RoutedEventArgs e)
+        {
+            loja = new Loja(txtNome.Text);
+            window.Show();
+        }
+
+        private void BtnInserir_Click(object sender, RoutedEventArgs e)
+        {
+            string p = window.txtPlaca.Text;
+            string f = window.txtFabricante.Text;
+            string m = window.txtModelo.Text;
+            int a = int.Parse(window.txtAno.Text);
+            decimal pr = decimal.Parse(window.txtPreco.Text);
+            Veiculo v = new Veiculo(p, f, m, a, pr);
+            loja.Inserir(v);
+        }
+
+        private void BtnFabricante_Click(object sender, RoutedEventArgs e)
+        {
+            listVeiculo.ItemsSource = loja.ListarPorFabricante();
         }
     }
 }
