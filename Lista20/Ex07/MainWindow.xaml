@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex07"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="400">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Loja">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Nome" />
+                <TextBox Height="23" Grid.Row="1"/>
+            </Grid>
+        </GroupBox>
+
+        <Button Content="Loja" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="170,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Listar por Fabricante" HorizontalAlignment="Left" Margin="250,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132"/>
     </Grid>
 </Window>
