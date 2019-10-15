@@ -66,7 +66,7 @@ namespace Ex04
             int op = Menu();
             while (op != 0)
             {
-                if (op < 0 || op > 7) Console.WriteLine("Entrada inválida");
+                if (op < 0 || op > 6) Console.WriteLine("Entrada inválida");
                 switch (op)
                 {
                     case 1: InserirFuncionario(construtora); break;
