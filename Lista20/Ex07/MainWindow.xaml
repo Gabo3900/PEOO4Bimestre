@@ -22,9 +22,10 @@
                 <TextBox Height="23" Grid.Row="1"/>
             </Grid>
         </GroupBox>
-
         <Button Content="Loja" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Excluir" HorizontalAlignment="Left" Margin="170,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Listar por Fabricante" HorizontalAlignment="Left" Margin="250,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="90,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Listar por Fabricante" HorizontalAlignment="Left" Margin="170,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132"/>
+        <Button Content="Listar por Modelo" HorizontalAlignment="Left" Margin="10,35,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        <ListBox Name="listVeiculo" Grid.Row="2"/>
     </Grid>
 </Window>
