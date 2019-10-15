@@ -33,7 +33,16 @@ namespace Ex08
         {
             produtos.Remove(p);
         }
-
+        public List<Produto> ListarDescricao()
+        {
+            produtos.Sort(new CompDescricao());
+            return produtos;
+        }
+        public List<Produto> ListarPreco()
+        {
+            produtos.Sort(new CompPreco());
+            return produtos;
+        }
         public Produto[] Vencidos()
         {
             List<Produto> vencidos = new List<Produto>();
