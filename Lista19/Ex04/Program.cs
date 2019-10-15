@@ -3,61 +3,6 @@ using System.Collections.Generic;
 
 namespace Ex04
 {
-    class Construtora
-    {
-        private List<Funcionario> funcs = new List<Funcionario>();
-        public void Inserir(Funcionario f) { funcs.Add(f); }
-        public List<Funcionario> Funcionarios() { return funcs; }
-        public List<Engenheiro> Engenheiros()
-        {
-            List<Engenheiro> e = new List<Engenheiro>();
-            foreach (Funcionario f in funcs)
-            {
-                if (f is Engenheiro) e.Add(f as Engenheiro);
-            }
-            return e;
-        }
-        public List<Motorista> Motoristas()
-        {
-            List<Motorista> m = new List<Motorista>();
-            foreach (Funcionario f in funcs)
-            {
-                if (f is Motorista) m.Add(f as Motorista);
-            }
-            return m;
-        }
-    }
-
-    class Funcionario
-    {
-        private string nome;
-        private string email;
-        private string fone;
-        public void SetNome(string n) { nome = n; }
-        public void SetEmail(string e) { email = e; }
-        public void SetFone(string f) { fone = f; }
-        public string GetNome() { return nome; }
-        public string GetEmail() { return email; }
-        public string GetFone() { return fone; }
-        public override string ToString() { return $"{nome} {email} {fone}"; }
-    }
-
-    class Engenheiro : Funcionario
-    {
-        private string crea;
-        public void SetCrea(string c) { crea = c; }
-        public string GetCrea() { return crea; }
-        public override string ToString() { return $"{base.ToString()} {crea}"; }
-    }
-
-    class Motorista : Funcionario
-    {
-        private string cnh;
-        public void SetCnh(string c) { cnh = c; }
-        public string GetCnh() { return cnh; }
-        public override string ToString() { return $"{base.ToString()} {cnh}"; }
-    }
-
     class Program
     {
         static void Main(string[] args)

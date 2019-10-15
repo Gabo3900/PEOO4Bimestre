@@ -18,7 +18,7 @@ namespace Ex05
         }
         public override string ToString()
         {
-            return $"{base.ToString()}";
+            return $"{base.ToString()} - {k} contatos - {j} grupos";
         }
         public void InserirContato(Contato c)
         {
