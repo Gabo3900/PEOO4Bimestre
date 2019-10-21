@@ -41,7 +41,7 @@ namespace Ex05
         }
         public bool Remove(K chave)
         {
-            if (chaves.Contains(chave))
+            if (Contains(chave))
             {
                 chaves.Remove(chave);
                 return true;
