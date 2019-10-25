@@ -12,10 +12,10 @@
         <TextBox Name="txtFab" HorizontalAlignment="Left" Height="23" Margin="170,10,0,0" TextWrapping="Wrap" Text="Fabricante" VerticalAlignment="Top" Width="100"/>
         <TextBox Name="txtData" HorizontalAlignment="Left" Height="23" Margin="275,10,0,0" TextWrapping="Wrap" Text="Data da Compra" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="txtEstrela" HorizontalAlignment="Left" Height="23" Margin="400,10,0,0" TextWrapping="Wrap" Text="Estrelas" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Inserir" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Excluir" HorizontalAlignment="Left" Margin="90,36,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="170,36,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Top 10" HorizontalAlignment="Left" Margin="250,35,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_Insert"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="90,36,0,0" VerticalAlignment="Top" Width="75"  Click="Button_Click_Delete"/>
+        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="170,36,0,0" VerticalAlignment="Top" Width="75"  Click="Button_Click_Update"/>
+        <Button Content="Top 10" HorizontalAlignment="Left" Margin="250,35,0,0" VerticalAlignment="Top" Width="75"  Click="Button_Click_Top10"/>
         <DataGrid Name="grid" HorizontalAlignment="Left" Height="146" Margin="10,63,0,0" VerticalAlignment="Top" Width="465"/>
     </Grid>
 </Window>
