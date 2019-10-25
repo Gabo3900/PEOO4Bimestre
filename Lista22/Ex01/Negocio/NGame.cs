@@ -15,6 +15,16 @@ namespace Negocio
             PGame p = new PGame();
             return p.Open().OrderBy(c => c.Nome).ToList();
         }
+        public List<Game> SelectData()
+        {
+            PGame p = new PGame();
+            return p.Open().OrderBy(c => c.DataCompra).ToList();
+        }
+        public List<Game> Top10()
+        {
+            PGame p = new PGame();
+            return p.Open().OrderBy(c => c.Estrelas).ToList().GetRange(0, 10);
+        }
         public void Insert(Game c)
         {
             PGame p = new PGame();
