@@ -42,27 +42,32 @@ namespace JogosApp
 
         private void Button_Click_Delete(object sender, RoutedEventArgs e)
         {
-
+            Game g = new Game();
+            NGame n = new NGame();
+            g.Id = int.Parse(txtId.Text);
+            n.Delete(g);
+            grid.ItemsSource = n.Select();
         }
 
         private void Button_Click_Update(object sender, RoutedEventArgs e)
         {
 
-            Game c = new Game();
-            c.Id = int.Parse(txtId.Text);
+            Game g = new Game();
+            g.Id = int.Parse(txtId.Text);
             g.Nome = txtNome.Text;
             g.Fabricante = txtFab.Text;
             g.DataCompra = DateTime.Parse(txtData.Text);
             g.Estrelas = int.Parse(txtEstrela.Text);
             NGame n = new NGame();
-            n.Update(c);
+            n.Update(g);
             grid.ItemsSource = null;
             grid.ItemsSource = n.Select();
         }
 
         private void Button_Click_Top10(object sender, RoutedEventArgs e)
         {
-
+            NGame n = new NGame();
+            grid.ItemsSource = n.Top10();
         }
     }
 }
